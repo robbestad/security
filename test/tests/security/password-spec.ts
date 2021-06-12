@@ -1,33 +1,30 @@
-var JSCheck, hash, verify, chai, expect, jsc;
+let JSCheck: any, jsc: any;
+import chai from "chai";
+let expect = chai.expect;
 
 JSCheck = require("../../jscheck/jscheck");
-
-hash = require("../../../lib/security/hashing/hashing").hash;
-verify = require("../../../lib/security/hashing/hashing").verify;
-
-chai = require("chai");
-expect = chai.expect;
+import { Hash, Verify } from "../../../src";
 
 jsc = JSCheck();
 
 describe("Testing passwords", () => {
   it("10 random passwords follows the password rules", function (done) {
-    function on_done(log) {
+    function on_done(log: any) {
+      console.log({ log });
       try {
         expect(log.pass).to.eql(10);
         done();
       } catch (e) {
-        console.log(fail);
         done(e);
       }
     }
 
     jsc.claim(
       "Login",
-      async function predicate(verdict, a) {
-        var hashed = hash(a);
+      async function predicate(verdict: Function, a: string) {
+        var hashed = Hash(a);
         if (!hashed) return verdict(false);
-        let result = verify(hashed.hash, a, hashed.salt);
+        let result = Verify(hashed.hash, a, hashed.salt);
         return verdict(result);
       },
       [

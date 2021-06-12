@@ -1,8 +1,5 @@
 node_modules/
-keys/
-client_old
+dist
 .idea
-sessions
 yarn-error.log
-*.zip
 .DS_Store
