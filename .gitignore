@@ -1,4 +1,5 @@
 node_modules/
+npmpublish
 dist
 .idea
 yarn-error.log
