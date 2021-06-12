@@ -1,3 +1,5 @@
+import { ILog } from "../../../src/interfaces";
+
 let JSCheck: any, jsc: any;
 import chai from "chai";
 let expect = chai.expect;
@@ -9,8 +11,7 @@ jsc = JSCheck();
 
 describe("Testing passwords", () => {
   it("10 random passwords follows the password rules", function (done) {
-    function on_done(log: any) {
-      console.log({ log });
+    function on_done(log: ILog) {
       try {
         expect(log.pass).to.eql(10);
         done();

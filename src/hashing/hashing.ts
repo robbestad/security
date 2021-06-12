@@ -1,3 +1,5 @@
+import { IHash } from "../interfaces";
+
 let SALT_LENGTH: number, iterations: number, isDev: boolean;
 
 import crypto from "crypto";
@@ -10,11 +12,6 @@ let randomBytes = Bluebird.promisify(crypto.randomBytes);
 SALT_LENGTH = 256;
 isDev = process.env.NODE_ENV !== "production";
 iterations = isDev ? 1e3 : 1e5;
-
-interface IHash {
-  hash: string;
-  salt: string;
-}
 
 function hash(password: string): IHash | undefined {
   if (!ValidPass(password)) return undefined;

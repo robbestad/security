@@ -1,0 +1,27 @@
+{
+  "name": "@svenanders/security",
+  "version": "1.0.0",
+  "description": "Hash and verify, encrypt and decrypt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svenanders/security.git"
+  },
+  "keywords": [
+    "security",
+    "hash",
+    "verify",
+    "encrypt",
+    "decrypt",
+    "validate"
+  ],
+  "author": "Sven Anders Robbestad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svenanders/security/issues"
+  },
+  "homepage": "https://github.com/svenanders/security#readme"
+}
