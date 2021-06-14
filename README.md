@@ -1,5 +1,7 @@
 # @svenanders/security
 
+Node.js package for handling hashing of passwords and encryption/decryption of data
+
 * Encrypt and Decrypt
 
 Provide `ENCRYPTION_KEY` through env.
