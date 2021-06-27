@@ -7,7 +7,7 @@
     "test": "cross-env DEBUG=test,db NODE_ENV=test ts-mocha test/tests/**/*.ts",
     "prepare": "husky install",
     "precompile": "rimraf dist",
-    "compile": "tsc"
+    "compile": "ncc build src/index.ts -o dist"
   },
   "husky": {
     "hooks": {
@@ -21,6 +21,8 @@
     "@types/node": "^15.12.2",
     "chai": "^4.3.4",
     "cross-env": "^7.0.3",
+    "esbuild": "^0.12.10",
+    "esbuild-node": "^0.4.0",
     "husky": "^6.0.0",
     "mocha": "^9.0.0",
     "prettier": "^2.3.1",
