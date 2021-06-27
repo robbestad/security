@@ -8,4 +8,4 @@ export const Verify = HashFnc.verify;
 export const Encrypt = EncryptionFnc.encrypt;
 export const Decrypt = EncryptionFnc.decrypt;
 export const ValidateEmail = EmailValidation;
-export const ValidatePassw1ord = PasswordValidation;
+export const ValidatePassword = PasswordValidation;
